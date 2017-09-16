@@ -6,11 +6,11 @@ Copyright 2017 Deepgram
 from __future__ import print_function
 import sys
 
-PACKAGE = 'web'
+PACKAGE = 'quack'
 
 ###############################################################################
-if sys.version_info < (3, 6):
-	print('ERROR: Requires Python 3.6+.', file=sys.stderr)
+if sys.version_info < (3, 5):
+	print('ERROR: Requires Python 3.5+.', file=sys.stderr)
 	sys.exit(1)
 
 ###############################################################################

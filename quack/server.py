@@ -19,7 +19,7 @@ def create_server(port=8080, base_url=None, debug=False):
 		.. code-block:: python
 
 			import asyncio
-			from web import create_server, route, aspect, Handler, \
+			from quack import create_server, route, aspect, Handler, \
 				Http401Unauthorized
 
 			@route('/test')
