@@ -93,7 +93,7 @@ setup(
 
 	# Dependencies
 	install_requires=[
-		'tornado>=4.5.2'
+		'tornado>=4.5.2, <5.0'
 	],
 	dependency_links=[
 	],
