@@ -10,7 +10,7 @@ from . import get_routes
 logger = logging.getLogger(__name__)
 
 ###############################################################################
-def create_server(port=8080, base_url=None, debug=False):
+def create_server(port=8080, base_url=None, max_buffer_size=10*1024*1024, debug=False):
 	""" Run the main event loop.
 
 		Examples
@@ -45,7 +45,7 @@ def create_server(port=8080, base_url=None, debug=False):
 		get_routes(base_url),
 		debug=debug
 	)
-	server = tornado.httpserver.HTTPServer(app)
+	server = tornado.httpserver.HTTPServer(app, max_buffer_size=max_buffer_size)
 	server.listen(port)
 
 	return server
